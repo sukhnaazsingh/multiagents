@@ -62,9 +62,11 @@ class RouteAgent:
         - Events near the route: {events["messages"][-1].content}
 
         Provide a travel recommendation, including:
-        1. Whether the route is good or if delays are expected.
-        2. If congestion is likely, suggest alternatives.
-        3. If weather is bad, recommend extra precautions.
+        1. Check the path the driver would be suggested by a Maps Software.
+        2. If on the way there might be interruptions, then suggest an alternate route with exact details, like which highway, route etc.
+        3. Whether the route is good or if delays are expected.
+        4. If congestion is likely, suggest alternatives.
+        5. If weather is bad, recommend extra precautions.
         """
 
         recommendation = self.recommendation_agent.invoke(
